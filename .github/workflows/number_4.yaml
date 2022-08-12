@@ -1,5 +1,5 @@
 name: Some GitHub action
-runs-on: [push]
+on: [push]
 
 
 jobs:
