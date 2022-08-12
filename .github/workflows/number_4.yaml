@@ -1,0 +1,10 @@
+name: Some GitHub action
+on: [push]
+
+
+jobs:
+  build:
+    steps:
+      - name: run booklet
+        run: python3 booklet_numbering.py 4
+
