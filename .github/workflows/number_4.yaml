@@ -18,8 +18,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: run hello
+      - name: run hello with GCC
         working-directory: c
         run: |
-          make
+          make clean
+          make CC=gcc
+          ./hello
+      - name: run hello with clang
+        working-directory: c
+        run: |
+          make clean
+          make CC=clang
           ./hello

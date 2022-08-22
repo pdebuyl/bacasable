@@ -1,5 +1,9 @@
 
 all: hello
 
+clean:
+	rm -f hello
+.PHONY: clean
+
 hello: hello.c
-	gcc -Wall -std=c99 -o $@ $<
+	$(CC) -Wall -std=c99 -o $@ $<
